@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+nav{
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: rgb(232, 232, 232);
+}
+
+.h2{
+    text-align: center;
+    margin: 10px;
+}
+
+/* Startit Section */
+
+.section2{
+    display: grid;
+    padding: 60px 0;
+    grid-template-columns: repeat(4, 210px);
+    background-color: rgb(232, 232, 232);
+    gap: 40px;
+}
+
+.startitContainer{
+    border-radius: 18px;
+    background-color: white;
+    height: 100px;
+    padding: 10px;
+}
+
+.flex{
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3{
+    font-size: 18px;
+}
+
+/* Joberty section */
+
+#section{
+    display: grid;
+    grid-template-columns: repeat(2, 260px);
+    gap: 20px;
+}
+
+.jobertyContainer{
+    border: 2px solid rgb(232, 232, 232);
+    margin-bottom: 10px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.flexJoberty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 1024px){
+
+    .section2{
+        grid-template-columns: repeat(3, 210px);
+    }
+    
+}
+
+
+@media(max-width: 764px){
+
+    .section2{
+        grid-template-columns: repeat(2, 210px);
+    }
+    
+}
+
+
+@media(max-width: 558px){
+
+    .section2{
+        grid-template-columns: repeat(1, 210px);
+    }
+    
+    
+    #section{
+        grid-template-columns: repeat(1, 260px);
+}
+
+}
