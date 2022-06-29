@@ -4,7 +4,12 @@ const fs = require('fs');
 async function scrapeData () {
     const browser = await puppeteer.launch({
       headless: true,
-      args:['--no-sandbox']
+      args:[ 
+      "--incognito",
+      "--no-sandbox",
+      "--single-process",
+      "--no-zygote"
+    ]
     });
     const page = await browser.newPage();
     await page.goto('https://www.joberty.rs/IT-poslovi?page=1&pageSize=10&seniority=Junior&sort=created&technologies=React,ReactJS', {

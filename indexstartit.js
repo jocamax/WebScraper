@@ -4,7 +4,12 @@ const fs = require('fs');
 async function scrapeDataStartit () {
     const browser = await puppeteer.launch({
       headless: true,
-      args:['--no-sandbox']
+      args:[ 
+        "--incognito",
+        "--no-sandbox",
+        "--single-process",
+        "--no-zygote"
+      ]
     });
     const page = await browser.newPage();
     await page.goto('https://startit.rs/poslovi/react/',{
